@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MO | Graphic Designer</title>
+  <meta name="description" content="Mo is a graphic designer specialising in email design, with 6+ years and 100+ brands behind the work. See selected projects and get in touch.">
+  <meta name="author" content="Mohamed El-Batch">
+  <meta name="theme-color" content="#0f33ff">
+  <meta property="og:title" content="MO | Graphic Designer">
+  <meta property="og:description" content="Email design for brands. 6+ years, 100+ brands, 6000+ emails.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preload" href="assets/fonts/Montserrat-Black.woff" as="font" type="font/woff" crossorigin>
+  <!-- Flags JS early (so the splash shows with no flash) and sets a failsafe in case the script never loads -->
+  <script>(function(){var h=document.documentElement;h.className+=' js';window.__fs=setTimeout(function(){h.classList.add('is-ready','splash-done')},7000)})();</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Intro splash: blue screen; the dark page pulls down from the top and reveals the content -->
+<div class="splash" id="splash" aria-hidden="true"></div>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="header">
+  <a class="logo" href="#home" aria-label="MO, back to top">MO</a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Full screen menu (all screen sizes) -->
+<nav class="menu" id="menu" aria-label="Main">
+  <ul>
+    <li><a href="#home" data-spy="home">Home</a></li>
+    <li><a href="#work" data-spy="work">Work</a></li>
+    <li><a href="#contact" data-spy="contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Numbered side nav (large screens only) -->
+<nav class="side-nav" aria-label="Sections">
+  <ul>
+    <li><a href="#home" data-spy="home" data-n="01"><span>Home</span></a></li>
+    <li><a href="#work" data-spy="work" data-n="02"><span>Work</span></a></li>
+    <li><a href="#contact" data-spy="contact" data-n="03"><span>Contact</span></a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+  <!-- HOME -->
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <h1 id="hero-title">
+          <span class="line"><span>Hi, I'm Mo.</span></span>
+          <span class="line"><span>Your Graphic</span></span>
+          <span class="line"><span>Designer</span></span>
+        </h1>
+        <p class="lead fade-up" style="--d:.55s">I design emails people actually read.</p>
+        <div class="actions fade-up" style="--d:.7s">
+          <a class="btn" href="#work"><span class="btn__bg"></span>See my work
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="link" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </div>
+    <img class="hero__img" src="assets/img/astronaut.webp" width="511" height="463" alt="" decoding="async">
+    <div class="wrap"><div class="rule" aria-hidden="true"></div></div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-wrap" aria-label="At a glance">
+    <div class="wrap">
+      <ul class="stats reveal" id="stats">
+        <li><strong>6+</strong><span>Years of experience</span></li>
+        <li><strong>100+</strong><span>Brands</span></li>
+        <li><strong>6000+</strong><span>Emails created</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <h2 id="work-title">My work</h2>
+        <p>Tap a project to see the designs.</p>
+      </div>
+      <div class="grid" id="grid"></div>
+      <noscript><p class="lead">Please enable JavaScript to browse the projects, or <a href="https://drive.google.com/drive/folders/1ox5c9u2JPeI6uI7teL4J5isp4RMNqBIj">view the email examples here</a>.</p></noscript>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap reveal contact__grid">
+      <h2 id="contact-title" class="big">Ready to elevate<br>your emails?<br>Let's talk.</h2>
+      <ul class="contact__list">
+        <li><a class="crow" id="copy-email" href="mailto:mohamed.elbatch@gmail.com?subject=Project%20enquiry" data-copy="mohamed.elbatch@gmail.com">
+          <span class="crow__text"><span class="crow__label" id="copy-label">Email</span><span class="crow__value">mohamed.elbatch@gmail.com</span></span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></li>
+        <li><a class="crow" href="https://www.upwork.com/fl/moodesign" target="_blank" rel="noopener">
+          <span class="crow__text"><span class="crow__label">Upwork</span><span class="crow__value">Hire me on Upwork</span></span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap"><p>&copy; <span id="year">2026</span> MOdesign. All rights reserved.</p></div>
+</footer>
+
+<!-- Project viewer -->
+<dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+  <div class="viewer__head">
+    <div class="viewer__info">
+      <p class="viewer__cat" id="viewer-cat"></p>
+      <h3 id="viewer-title"></h3>
+      <p class="viewer__desc" id="viewer-desc"></p>
+    </div>
+    <button class="icon-btn viewer__close" type="button" id="viewer-close" aria-label="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+  </div>
+  <div class="viewer__body" id="viewer-body" tabindex="-1">
+    <div class="viewer__images" id="viewer-images"></div>
+    <a class="btn viewer__link" id="viewer-link" target="_blank" rel="noopener" hidden><span class="btn__bg"></span><span id="viewer-link-text"></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="viewer__foot">
+    <button class="nav-btn" type="button" id="viewer-prev" aria-label="Previous project">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5M11 6l-6 6 6 6"/></svg><span>Prev</span>
+    </button>
+    <p class="viewer__count" id="viewer-count" aria-live="polite"></p>
+    <button class="nav-btn" type="button" id="viewer-next" aria-label="Next project">
+      <span>Next</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+</dialog>
+
+<script src="assets/js/projects.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
