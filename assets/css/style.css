@@ -123,6 +123,11 @@ body::after{content:"";position:fixed;inset:0;border:var(--frame) solid var(--bl
 .link{font-weight:700;font-size:.95em;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:12px 0;border-bottom:2px solid var(--line);transition:border-color .2s}
 .link:hover{border-color:var(--blue)}
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:clamp(24px,4vw,40px)}
+/* Phones: both actions share one left edge, text inset and height */
+@media (max-width:819px){
+  .actions{display:grid;grid-template-columns:max-content;justify-items:stretch;gap:14px}
+  .link{display:flex;align-items:center;min-height:58px;padding:0 28px;margin-right:22px;border:2px solid var(--line)}
+}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;padding-top:var(--header-h)}
@@ -139,7 +144,7 @@ h1{font-weight:900;line-height:1;letter-spacing:-.025em;font-size:clamp(3rem,7vw
 @media (max-aspect-ratio:1/1){
   .hero{min-height:0}
   .hero__grid{flex:none;padding-top:clamp(28px,9vw,80px);padding-bottom:0}
-  .hero__img{margin-top:clamp(-20px,-2vw,0px)}
+  .hero__img{margin-top:16px}
 }
 @media (min-width:980px) and (min-aspect-ratio:1/1){
   .hero__img{position:absolute;right:max(var(--gutter),calc((100% - var(--maxw))/2));bottom:calc(clamp(24px,4vw,44px) + 4px);width:min(40vw,540px);margin:0;z-index:0}
@@ -189,9 +194,10 @@ h2.big{font-size:clamp(2.6rem,10vw,7rem);line-height:.98;text-wrap:balance}
 @media (hover:none){.card__plus{opacity:1;transform:none;width:34px;height:34px}}
 
 /* Contact */
-.contact{min-height:70vh;display:flex;align-items:center}
+.contact{display:flex;align-items:center;padding-block:clamp(8px,3vw,32px) var(--section-y)}
+@media (min-width:980px){.contact{min-height:70vh;padding-block:var(--section-y)}}
 .contact__grid{display:grid;gap:clamp(36px,6vw,64px);align-items:center}
-.contact h2.big{font-size:clamp(1.7rem,7.6vw,4.6rem)}
+.contact h2.big{font-size:clamp(1.7rem,10vw,4.6rem)}
 .contact h2 .line > span{white-space:nowrap}   /* keeps the three lines exactly as written */
 @media (min-width:980px){.contact h2.big{font-size:clamp(2.4rem,4vw,4.2rem)}}
 .contact__list{border-bottom:2px solid var(--line)}
