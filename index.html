@@ -15,6 +15,8 @@
   <!-- Flags JS early (so the splash shows with no flash) and sets a failsafe in case the script never loads -->
   <script>(function(){var h=document.documentElement;h.className+=' js';window.__fs=setTimeout(function(){h.classList.add('is-ready','splash-done')},7000)})();</script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- lets the 3D scene import Three.js from the local copy in assets/vendor (no external requests) -->
+  <script type="importmap">{"imports":{"three":"./assets/vendor/three/build/three.module.js","three/addons/":"./assets/vendor/three/examples/jsm/"}}</script>
 </head>
 <body>
 
@@ -67,20 +69,16 @@
           </a>
           <a class="link" href="#contact">Get in touch</a>
         </div>
+        <ul class="stats fade-up" id="stats" style="--d:.85s" aria-label="At a glance">
+          <li><strong>6+</strong><span>Years of experience</span></li>
+          <li><strong>100+</strong><span>Brands served</span></li>
+          <li><strong>6000+</strong><span>Emails created</span></li>
+        </ul>
       </div>
     </div>
-    <img class="hero__img" src="assets/img/astronaut.webp" width="511" height="463" alt="" decoding="async">
-    <div class="wrap"><div class="rule" aria-hidden="true"></div></div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats-wrap" aria-label="At a glance">
-    <div class="wrap">
-      <ul class="stats reveal" id="stats">
-        <li><strong>6+</strong><span>Years of experience</span></li>
-        <li><strong>100+</strong><span>Brands served</span></li>
-        <li><strong>6000+</strong><span>Emails created</span></li>
-      </ul>
+    <div class="hero__stage" id="stage">
+      <img class="hero__img" src="assets/img/astronaut.webp" width="511" height="463" alt="" decoding="async">
+      <canvas class="hero__3d" id="astro" aria-hidden="true"></canvas>
     </div>
   </section>
 
@@ -112,8 +110,12 @@
   </section>
 </main>
 
+<!-- The planet: a view over the top of the Earth, drawn in 3D when the browser allows it -->
+<div class="earth" id="earth" aria-hidden="true"><canvas id="earth-canvas"></canvas></div>
+
 <footer class="footer">
-  <div class="wrap"><p>&copy; <span id="year">2026</span> MOdesign. All rights reserved.</p></div>
+  <div class="wrap"><p>&copy; <span id="year">2026</span> MOdesign. All rights reserved.</p>
+    <p class="credit">3D model &ldquo;<a href="https://sketchfab.com/3d-models/animated-floating-astronaut-in-space-suit-loop-e2c4b146e58141e4b87917456a9970b1" target="_blank" rel="noopener">Animated Floating Astronaut in Space Suit Loop</a>&rdquo; by LasquetiSpice, licensed <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Earth imagery: NASA Blue Marble.</p></div>
 </footer>
 
 <!-- Project viewer -->
@@ -146,5 +148,6 @@
 
 <script src="assets/js/projects.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/space.js"></script>
 </body>
 </html>

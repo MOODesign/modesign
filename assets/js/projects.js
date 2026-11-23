@@ -333,20 +333,6 @@ window.PROJECTS = [
     ]
   },
   {
-    "id": "panda-drum",
-    "title": "Panda Drum",
-    "niche": "Wellness & music",
-    "thumb": "assets/img/work/panda-drum/cover.webp",
-    "color": "#666053",
-    "images": [
-      "assets/img/work/panda-drum/01.webp",
-      "assets/img/work/panda-drum/02.webp",
-      "assets/img/work/panda-drum/03.webp",
-      "assets/img/work/panda-drum/04.webp",
-      "assets/img/work/panda-drum/05.webp"
-    ]
-  },
-  {
     "id": "ravine",
     "title": "RAVINE",
     "niche": "Outdoor & hunting",
@@ -374,24 +360,6 @@ window.PROJECTS = [
       "assets/img/work/rivanta/03.webp",
       "assets/img/work/rivanta/04.webp",
       "assets/img/work/rivanta/05.webp"
-    ]
-  },
-  {
-    "id": "savelix",
-    "title": "Savelix",
-    "niche": "Safety & health",
-    "thumb": "assets/img/work/savelix/cover.webp",
-    "color": "#946145",
-    "images": [
-      "assets/img/work/savelix/01.webp",
-      "assets/img/work/savelix/02.webp",
-      "assets/img/work/savelix/03.webp",
-      "assets/img/work/savelix/04.webp",
-      "assets/img/work/savelix/05.webp",
-      "assets/img/work/savelix/06.webp",
-      "assets/img/work/savelix/07.webp",
-      "assets/img/work/savelix/08.webp",
-      "assets/img/work/savelix/09.webp"
     ]
   },
   {
